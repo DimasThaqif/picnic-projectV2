@@ -32,10 +32,16 @@ Players.PlayerRemoving:Connect(cleanupPlayer)
 
 -- TEST sementara
 task.wait(2)
+
 for _, player in Players:GetPlayers() do
     local inv = playerInventories[player]
     if inv then
-        inv.Flower += 5
-        print("Flowers:", inv.Flower)
+        inv.Flower += 10
+        inv.Apple += 3
+
+        print("Inventory Test:")
+        print("Flower:", inv.Flower)
+        print("Apple:", inv.Apple)
     end
 end
+
